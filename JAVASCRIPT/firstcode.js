@@ -14,6 +14,7 @@ console.log(num);
 let username= "Adnan";
 console.log(username);
 
+
 //set variables constant
 let r = 4;
 //constant keyword
@@ -373,3 +374,17 @@ ref0[0]=9;
 console.log(refArray); //before calling by refernce 
 updateArr(refArray);  // calling function by referance of array
 console.log(refArray); //after calling by referance 12 replaced by 9 
+
+/*`const` is a signal that the identifier won't be reassigned. `let` is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm.*/
+
+//CLASSES
+
+class Car {
+    constructor(name, year) {
+      this.name = name;
+      this.year = year;
+    }
+  }
+
+  let car1 = new Car("Honda",1992);
+  console.log(car1);
