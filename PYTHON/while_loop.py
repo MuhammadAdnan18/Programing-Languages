@@ -1,6 +1,6 @@
 #-----------------------------------
 
-""""
+
 
 import random
 num=int(input("guess the right number "))
@@ -19,4 +19,4 @@ while guess_count < guess_limit:
       print("wrong 😥 ,The answer is: ",guess_num ," and remaing limits are: ",guess_limit)
       print("The range of answer is: 0 - 60")
       break
-    """
+    

@@ -1,4 +1,4 @@
-"""""
+
 bal=int(input("Enter Balance " ))
 if bal > 10:
     print("your acccount is verified")
@@ -11,9 +11,9 @@ else:
     
     print("your account was deleted because of  inactivity")
 
-"""
+
 #-------------------------------------------
-""""
+
 number =int(input("Enter a number  7"))
 
 def fizz_buzz(number):
@@ -34,4 +34,4 @@ if has_high_income and has_good_credit:
    
 else: 
     print("not elgable for loan")
-"""
+
