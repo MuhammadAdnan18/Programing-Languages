@@ -1,16 +1,33 @@
-       #car engine game without GUI
+      #car engine game without GUI
+command = ""
 
-command = input("Give command ")
+started = False
 
-if command=="start" :
-   print("Car has been started🚗" )
+while True:
+ command = input("Give command ").lower()
 
-elif command=="stop" :
+ if command=="start" :
+   if started:
+    print("Car has already been started🚗" )
+   else:
+      started=True
+      print("car is started 🚗") 
+
+ elif command=="stop" :
    print("Car has stopped 🚗")
+   if not started:
+    print("car is already stopped ")
+   else:
+     started:False
+     print("car is stopped 🚗")
+
+ elif command =="help" :
+   print("type start to start the car \n type stop to stop the car \n press x to exit the game")
    
-elif command=="help" :
-   print("type start to start the car \n type stop to stop the car \n press X to exit the game")
-   
-elif command =="X" :
-   print("The game is finished")     
+ elif command =="x" :
+   print("The game is finished")    
+   break
+ 
+ else:
+   print("wrong command😓,Try again") 
   
