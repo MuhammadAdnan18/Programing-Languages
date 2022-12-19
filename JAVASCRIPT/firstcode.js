@@ -388,3 +388,5 @@ class Car {
 
   let car1 = new Car("Honda",1992);
   console.log(car1);
+
+  //how to connect html with jab

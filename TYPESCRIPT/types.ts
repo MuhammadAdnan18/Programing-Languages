@@ -5,5 +5,6 @@
 let Name: String = "Ahmad";
 
 //emplicit type : no need to define data type //
- let fname = 'hamza';
+// DOES NOT WORK IN TYPESCRIPT // 
+let fname = 'hamza';
  let k = 4 ;

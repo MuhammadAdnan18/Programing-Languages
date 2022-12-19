@@ -1,0 +1,52 @@
+<!--here we applied internal css as well as external css-->
+
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1>HTML Form</h1>
+
+    <form name="submitted form" action="/action" method="GET">
+      <label for="Fname">First Name</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+
+      <label for="email">Enter Email</label>
+      <input type="text" id="email" name="email" /><br /><br />
+
+      <label for="r">Gender:</label>
+      <label for="male">Male</label>
+      <input type="radio" id="male" name="male" />
+      <label for="fmale">female</label>
+      <input type="radio" id="fmale" name="fmale" />
+      <br /><br />
+
+      <label for="ed">Education:</label>
+      <label for="m">Matric</label>
+      <input type="checkbox" id="m" name="m" />
+      <label for="I">Inter</label>
+      <input type="checkbox" id="I" name="I" />
+      <br /><br />
+
+      <input type="submit" value="SUBMIT" /><br /><br />
+    </form>
+
+    <!--INTERNAL CSS-->
+    <style>
+      form {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: larger;
+      }
+    </style>
+  </body>
+</html>
+
+<!---EXTERNAL CSS-->
+
+<style>
+  body {
+    background-color: darkgrey;
+  }
+</style>

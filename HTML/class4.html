@@ -1,0 +1,88 @@
+<html>
+<head>
+    
+<!--field set tag-->
+<!--Outgroup tag-->
+<!--map tag-->
+
+
+</head>
+<form name="Form1"action = "/action-page.php" method = "GET"> <!--method="POST"-->
+
+<label for="cars"choose a car></label>
+<select name="cars" id="cars">
+<optgroup label="JAPANES CARS">
+<option value="Nisan">nisan</option>
+<option value="Mehran">mehran</option>
+</optgroup>
+<optgroup label="CHINES CARS">
+<option value="Honda">honda</option>
+<option value="Civic">civic</option>
+</optgroup>
+
+<optgroup label="GERMAN CARS">
+    <option value="Audi">audi</option>
+</optgroup>
+
+
+</select>
+
+
+
+<fieldset>
+
+
+    <legend>QUALIFICATION</legend>
+<label for="fname">first Name</label>
+<input type="text" id="fname" name="fname"> <br><br>
+
+  <legend>Last name</legend>
+<label for="lname"></label> Last Name</label>
+<input type="text" id="lname" name="lname"> <br><br>
+
+
+<input type="submit" value="SUBMIT">
+
+</fieldset>
+
+<p>Choose your country: </p>
+<img src="flag.jpg" alt="F"  usemap="#countries"  >
+
+<map name="countries">  
+<area shape="rect" coords="242,56,390,164" alt="flag" href="https://en.wikipedia.org/wiki/China" >
+<area shape="rect" coords="55,63,202,158"  alt="flag" href="https://en.wikipedia.org/wiki/United_States" >
+<area shape="rect" coords="432,63,579,160" alt="flag" href="https://en.wikipedia.org/wiki/United_Kingdom" >
+<area shape="rect" coords="765,64,614,164" alt="flag" href="https://en.wikipedia.org/wiki/India" >
+<area shape="rect" coords="806,61,954,162" alt="flag" href="https://en.wikipedia.org/wiki/Indonesia" >
+
+</map>
+
+<img src="colours.jfif" alt="c" usemap="colors">
+
+<map name="colors">
+<area target="rect" coords="122,67,180,86" alt="yellow" href="https://en.wikipedia.org/wiki/Yellow">
+<area target="rect" coords="122,67,50,87" alt="green" href="https://en.wikipedia.org/wiki/Green">
+<area target="rect" coords="122,67,9,5" alt="purple" href="https://en.wikipedia.org/wiki/Purple">
+
+</map>
+
+
+
+
+</html>
+<style>
+
+fieldset {
+
+color:black;
+background-color: aquamarine;
+text-transform: capitalize;
+font-weight: bold;
+
+
+}
+
+
+
+</style>
+
