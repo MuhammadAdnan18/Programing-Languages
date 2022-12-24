@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title><TAbLE</TAble></title>
+</head>
+<body>
+<!--table:ANY INFO SHOWN IN THE FORM OF ROWS/COLUMN or Grid(e.g sports result)-->
+<!-- table tag is used to create table inside this tag there is trtag which symbolizes a seperate row inside tr td tag is used to create a cell inside a row if heading is reqiored than use th tag instead of td which has a scope value of col(if heading is for column) or row(if heading is for row) -->
+<!--spannng column/rows: when u want to comnbine two columns/rows into one(colspane OR rowspane)-->
+<!--long tables:A table has three main elements 1)thead 2)tbody 3)tfoot-->
+<!-- table cusstomization attributes: 1)table width, 2)cellpadding 3)cellspracing-->
+<!--borders and backgroung colors can be customized with table border and bgcolor attribute-->
+<h2>Students</h2>
+
+<table border="3" bgcolor="	#E8E8E8" width="400" cellpadding="10" cellspacing="0"> 
+<tr>
+<thead>
+<th bgcolor="#3498DB" >Student Name</th>
+<th bgcolor="#2ECC71">ID</th>
+<th bgcolor="#D68910">GPA</th>
+<th  bgcolor="#F6DDCC">Semester</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td bgcolor="#85C1E9">Ali Ahmad</td>
+<td bgcolor="#ABEBC6">53188</td>
+<td bgcolor="#F8C471">3.2</td>
+<td rowspan="2"  bgcolor="#FBEEE6">5</td>
+</tr>
+
+
+<tr>
+    <td bgcolor="#85C1E9">Shameer</td>
+    <td bgcolor="#ABEBC6">53888</td>
+    <td bgcolor="#F8C471">3.0</td>
+    
+    </tr> 
+
+<tr>
+    <td bgcolor="#85C1E9">Umar</td>
+    <td bgcolor="#ABEBC6">53588</td>
+    <td bgcolor="#F8C471">3.5</td>
+    <td bgcolor="#FBEEE6">7</td>
+    </tr>
+
+
+
+        <tr>
+            <td bgcolor="#85C1E9">Anwar</td>
+            <td bgcolor="#ABEBC6">53134</td>
+            <td bgcolor="#F8C471">3.9</td>
+            <td bgcolor="#FBEEE6">3</td>
+            </tr>
+</tbody>
+<tfoot>
+ <tr> <td bgcolor="#E74C3C" colspan="4"><b>Note: this is temperory data and can be changed anytime!</b></td></tr>
+</tfoot>
+
+</table>
+</body>
+</html>
