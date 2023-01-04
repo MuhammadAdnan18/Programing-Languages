@@ -1,0 +1,21 @@
+/*Box  moadel is used to understand borders,margin and paddig
+here if we create a border against form and 
+margin(the area outside the border)
+paddings(ther area inside border)*/
+#form{
+border: 7px solid brown;
+padding-left: 10px;
+padding: 5px;
+text-align: left;
+}
+
+#ad{
+/*to create space between borders we give margin (browser also autometically gives some margin but we can edit it*/
+margin-bottom: 5px;
+border: 5px solid black;
+padding-left: 5px;
+padding: 5px;
+text-align: center;
+background-color: darkcyan;
+}
+

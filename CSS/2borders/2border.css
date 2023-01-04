@@ -1,0 +1,36 @@
+
+
+#form,#i{
+
+border: 4px solid black;
+/*only bottom border*/
+border-bottom: 5px dotted white;
+/*for roundness of borders*/
+border-radius: 10px;
+}
+
+
+#i{
+
+padding: 3ch;
+width: 450px;
+height: 499px;
+}
+
+#form{
+
+background-color: darkcyan;
+
+}
+
+#ad{
+color: darkcyan;
+background-color: black;
+border: 4px solid darkcyan;
+}
+#fname{
+
+/*editing some part of line with span tag in html and styling it*/
+    border: 3px solid black;
+
+}

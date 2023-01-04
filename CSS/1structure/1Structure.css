@@ -1,0 +1,63 @@
+/*CSS is a Cascade styling sheet which is used tp modify or style elements whatever is written in style tag is a part of CSS */
+
+/*There is three type of CSS 1)inline CSS(written in the opening tag of that line, 2)Internal/Embeded CSS(written in the head section, 3)External CSS(written in external CSS file which is linked to html(By using Link tag*/
+
+
+/*External CSS*/
+
+/*CSS selectors:used to select the html elemnts which will be modified in CSS these are 8(1)universal(*) 2)type(,)3)class(.),4)ID(#),5)child(>),6)desendent selector(just give space), 7)sibling(+), 8)general sibling selector(~)*/
+
+/*PRIOTITY:inline>Internal>external*/
+*{
+color: gainsboro;
+padding: 3px;
+background-color: black;    
+}
+
+h3,h5,p{
+
+   background-color:navy;
+
+}
+
+.course{
+
+background-color: darksalmon;
+
+}
+
+#DS,#SE{
+
+    color: black;
+}
+
+#CE,#BCC{
+color: navy;
+
+}
+
+div > h2 {
+
+    color: blue;
+}
+
+ul #i,#p{
+
+color: yellow;
+
+}
+
+h2+h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+h1~h4{
+
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#career{
+
+background-color: blueviolet;
+
+}
