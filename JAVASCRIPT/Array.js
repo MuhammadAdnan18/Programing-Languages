@@ -4,7 +4,7 @@ var marks1=[88,57,72,49,77,23,90];
 
 //printing/accesing specific index
 
-console.log( marks[0]);
+console.log( marks1[0]);
 
 //accesing whole ARRAY
 
