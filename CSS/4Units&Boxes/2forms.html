@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link href="2border.css" type="text/CSS" rel="stylesheet">
+    <title>borders</title>
+  </head>
+
+  <body>
+    <!-- they are used to gain information form users-->
+    <!--we use different types of text inputs to take info from users like (text, password,radio button(only select one), checkboxess(multiple selection),dropdown boxes,submit button,image button,file upload)-->
+    <!--form tag to create form it has action attribute which has value of URL where the form will be submitted or Method attribute can also be used instead of action(value = get( for shorter forms AND ur whole info will be visible) OR post(to hide ur info AND for longer forms))-->
+    <!--input attriute is used inside forms whose value is type which specify what type of info user will enter input types maybe(text,password(hidden)),dateinput,radio button,check box,dropdown box,submit button,image button,file upload) another attriute is size of te box for given input and third attribute for max length(to decide max character input by user)-->
+    <!--text area tag is used to tell user about the input that you want to recieve eg for password text area will be:Enter your password(it is removed when user types something)it has two attributes 1)column(for width) rows(for height) -->
+    <!--label is used to name each input in the form eg gor username(name) o\it actually makes the whole label clickable -->
+    <!--sometimes we need to group some part of form in one section for this we use fieldtext tag and it has legend atribute which will be the name of that specific section-->
+    <!--if you want to make input necessory u will use the required tag so form will not be submitted until the user fills that input-->
+    <!--Required attribute if u want a field to be compulsory-->
+    <h2 id="ad">Admission form</h2>
+    <form id="form" action="/ss.webp" method="get" >
+    
+ 
+
+      <p>
+       <span id="fname">full name:</span> 
+        <label><input type="text" size="20" maxlength="40" /></label>
+      </p>
+
+      <p>
+        father name:
+        <input type="text" size="20" />
+      </p>
+
+      <p>
+        Enter your account Number:
+        <input type="password" required />
+      </p>
+
+      <p>
+        Enter your DOB:
+        <input type="date" />
+      </p>
+
+      <!--If u want only single selection then give same name to both inputs-->
+
+      <p>
+        Gender:
+        <input type="radio" name="Gender" />Male
+        <input type="radio" name="Gender" />Female
+      </p>
+
+      <!--for selecting multiple give different names to inputs-->
+      <p>
+        education:
+        <input type="radio" name="m" />Matric <input type="radio" name="f" />FSC
+      </p>
+
+      <p>
+        Nationality:
+        <select>
+          <option>Pakistan</option>
+          <option>Afgahnistan</option>
+          <option>Bangladesh</option>
+          <option>Indonesia</option>
+          <option>Saudi Arabia</option>
+          <option>Qatar</option>
+          <option>Turkey</option>
+          <option>Iran</option>
+          <option>Palestine</option>
+        </select>
+      </p>
+
+      <p>
+        Your favourite subjects:
+        <input type="checkbox" name="Coputer Science" />Computer Science
+        <input type="checkbox" name="Math" />Math
+        <input type="checkbox" name="Chemistry" />Chemistry
+        <input type="checkbox" name="Biology" />Biology
+      </p>
+
+      <p>
+        upload your Matric marks sheet:
+        <input type="file" name="mm" />
+      </p>
+      <br />
+      <input type="submit" name="s" />
+      <br />
+      <br />
+
+      <input type="image" src="a.png" width="60" />
+    </form>
+<img id="i" src="build.jpg" alt="scifi">
+
+
+  </body>
+</html>
