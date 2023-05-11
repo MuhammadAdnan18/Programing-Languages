@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8mb4" collation="utf8mb4_general_ci">practice</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="users" view="colnames">
+<left>0</left>
+<top>0</top>
+<width>109</width>
+<height>180</height>
+<sql_create_table>CREATE TABLE `users` (
+  `f_name` varchar(50) DEFAULT NULL,
+  `id` int(11) NOT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `contact_No` varchar(20) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `gender` enum('M','F','O') DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</sql_create_table>
+</table>
+<table name="constainedinfo" view="colnames">
+<left>114</left>
+<top>0</top>
+<width>99</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `constainedinfo` (
+  `s_name` varchar(50) NOT NULL,
+  `s_id` int(11) NOT NULL,
+  `roll_No` int(11) DEFAULT NULL,
+  `contact` varchar(22) NOT NULL,
+  `semester` tinyint(4) NOT NULL,
+  `age` tinyint(4) NOT NULL CHECK (`age` &gt;= 18),
+  UNIQUE KEY `s_id` (`s_id`),
+  UNIQUE KEY `contact` (`contact`),
+  KEY `roll_No` (`roll_No`),
+  CONSTRAINT `constainedinfo_ibfk_1` FOREIGN KEY (`roll_No`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

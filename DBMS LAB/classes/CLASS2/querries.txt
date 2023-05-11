@@ -1,0 +1,47 @@
+CREATE DATABASE schooldb
+
+CREATE TABLE student4(
+s_id INT NOT NULL,
+s_name VARCHAR(50) NULL,
+f_name VARCHAR(50) NULL,
+phone INT NULL
+);
+
+CREATE TABLE deaprt(
+d_id INT NOT NULL PRIMARY KEY ,
+d_name VARCHAR(50) NULL );
+
+CREATE TABLE deaprt(
+d_id INT NOT NULL PRIMARY KEY ,
+d_name VARCHAR(50) NULL );
+
+
+CREATE TABLE employee1(
+e_id INT NOT NULL AUTO_INCREMENT,
+e_name VARCHAR(50) NULL,
+salary NUMERIC(8,4) NULL,
+designation VARCHAR(50) NULL,
+PRIMARY KEY(e_id) 
+ );
+
+ALTER TABLE student4
+ADD PRIMARY KEY (s_id)
+
+
+ALTER TABLE student4 
+MODIFY COLUMN s_id INT NOT NULL  AUTO_INCREMENT
+
+ALTER TABLE employee1
+ADD COLUMN city
+
+ALTER TABLE employee1
+DROP COLUMN city
+
+ALTER TABLE student4
+ADD COLUMN depart_id INT NULL
+
+ALTER TABLE student4
+ADD FOREIGN KEY (depart_id)  REFERENCES deaprt(d_id) 
+
+CREATE DATABASE mytestdb
+DROP DATABASE mytestdb

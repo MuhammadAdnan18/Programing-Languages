@@ -1,0 +1,7 @@
+join
+veiw
+stored procedures
+sub queries
+normalization 
+triggers
+functions

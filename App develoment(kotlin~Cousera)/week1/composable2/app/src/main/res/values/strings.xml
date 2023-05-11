@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">composable</string>
+    <string name="title">little lemon</string>
+    <string name="greetings">greeting</string>
+</resources>

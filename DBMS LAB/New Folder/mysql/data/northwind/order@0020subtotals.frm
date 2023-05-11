@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `northwind`.`order details`.`OrderID` AS `OrderID`,sum(`northwind`.`order details`.`UnitPrice` * `northwind`.`order details`.`Quantity` * (1 - `northwind`.`order details`.`Discount`) / 100 * 100) AS `Subtotal` from `northwind`.`order details` group by `northwind`.`order details`.`OrderID`
+md5=7fd2675b37e77f335ff4c318eb17cb5e
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=2
+with_check_option=0
+timestamp=2023-01-20 13:07:48
+create-version=2
+source=SELECT `Order Details`.OrderID, \nSum((`Order Details`.UnitPrice*Quantity*(1-Discount)/100)*100) AS Subtotal\nFROM `Order Details`\nGROUP BY `Order Details`.OrderID
+client_cs_name=utf8
+connection_cl_name=utf8_general_ci
+view_body_utf8=select `northwind`.`order details`.`OrderID` AS `OrderID`,sum(`northwind`.`order details`.`UnitPrice` * `northwind`.`order details`.`Quantity` * (1 - `northwind`.`order details`.`Discount`) / 100 * 100) AS `Subtotal` from `northwind`.`order details` group by `northwind`.`order details`.`OrderID`
+mariadb-version=100425

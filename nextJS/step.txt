@@ -1,0 +1,9 @@
+steps:
+1)npx create-next-app@latest lecture1
+#creates next.js directory app where "lecture1" is the name of project
+2)npm run dev 
+#this runs your app on browser
+3)changing headings with fast refresh rate(welcome to Next.js > Learn Next.js
+4)Routing(Defining how and from where each page/function will be accesed on your website
+
+5)

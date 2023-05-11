@@ -1,0 +1,54 @@
+/*three types of units in CSS 
+1)Absolute Units: px, pt, PC, in, cm, mm
+2)Relative Units: em, rem, %, ex, ch, fr
+3)Viewport Units: VW, vh, vmin, vmax
+
+most used units: RELATIVE UNITS
+
+1)%: We can use % on any element and adjust size according to their current pixels by comparing with parents size
+e.g As we know that  by default the browser reads any text as 16 px so if we want to use % unit on this text we will have to use it accordig to 16 px(100%=16,50%=8,,200%=32)
+*/
+.h{
+
+    font-size: 200%;
+
+}
+/*2)rem: it takes the root element of html file(which is html itself(16 px)) and standarize it and works according to it e.g(2rem = 16px, 0.8rem=12px)*/
+
+.h1{
+
+font-size: 2.5rem;
+
+}
+/*#rem trick:make root/html font size = 10px and then use rim to adjust sizes (it makes it easier to calculate with 10))e.g leftmargin=4.4 rem (44 px)*/
+html{
+    font-size: 62.5%; /*62/5%=10px (we write in percentile because this helps to make website responsive(eg when user changes font size it will cange automatically)*/
+    
+
+}
+
+/*em: instead of comparing the root elemnt like rem em uses the parent element to adjust the size*/
+
+
+.h2{
+padding-left: 1.5em;  /*(15px bcz here root=10px)*/
+
+}
+/*which unit to use where:
+font size:rem 
+padding and margin:em 
+
+
+VEIWPORT UNITS: 
+1)VH:it is used to change height ,select the whole weiwpoint and styles the web according to the device(mobile ,leptop,anything)*/
+.h{
+background-color: blueviolet;
+height: 50vh; /*50% of total area*/
+}
+
+/*2vw same thing as vh but for widthie if we style the same element we styled vh with:*/
+.h{
+    background-color: blueviolet;
+    width: 50vw; /*50% of total area*/
+    }
+

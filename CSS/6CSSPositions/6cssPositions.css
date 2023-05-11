@@ -1,0 +1,38 @@
+/*there are following Positions in CSS:
+1)STATIC(default)
+2)RELATIVE:hcanges from current status to any direcion(top,bottom,left,right)
+*/
+.p1{
+
+position: relative;
+left:  50px;
+top: 30px;
+z-index: 200;
+
+}
+/*3)absolute position: takes element out ofdocument flow*/
+.p2{
+position: absolute;
+top:0px;
+}
+
+.float{
+    border: 5px solid brown;
+
+}
+.center{
+
+border: 3px solid black;
+ 
+}
+/*how to center an elemnt  eg:centre*/
+
+.center h1{
+
+border: 2px solid saddlebrown;
+margin-right: 83%;
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%,55%);
+}

@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    border: 2px solid brown;
+
+}
+.p1{
+
+ 
+ width: 25%;
+ background-color: azure;
+ /*here we will use float with the help of which p1 class comes out of css ie all styles are not applied on this portion*/ 
+ float: left;
+}
+
+.p2{
+
+    
+    width: 25%;
+    background-color:skyblue;
+    float: left;
+
+
+}
+/*But due to float property of p1 and p2 other elemnets have lost their structure so to fix that*/
+.p3{
+    
+ /*removes any float element on the left side of that element*/
+float: left;
+width: 25%;
+background-color: coral;
+
+}
+.p4{
+   
+ /*removes any float element on the left side of that element*/
+float: right;
+width: 25%;
+background-color: cornflowerblue;
+}
+
+/*to add all the floating elements back in css document*/
+.float::after{
+content: "";
+display: block;
+clear: both;
+
+}

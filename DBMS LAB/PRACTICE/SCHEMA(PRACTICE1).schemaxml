@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8mb4" collation="utf8mb4_general_ci">practice</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="users" view="colnames">
+<left>0</left>
+<top>0</top>
+<width>109</width>
+<height>197</height>
+<sql_create_table>CREATE TABLE `users` (
+  `f_name` varchar(50) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `contact_No` varchar(20) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `gender` enum('M','F','O') DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
