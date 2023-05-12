@@ -1,9 +1,0 @@
-[Sat Jan 28 12:33:34.217271 2023] [ssl:warn] [pid 52:tid 368] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat Jan 28 12:33:34.385516 2023] [ssl:warn] [pid 52:tid 368] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat Jan 28 12:33:35.103167 2023] [mpm_winnt:notice] [pid 52:tid 368] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.1.10 configured -- resuming normal operations
-[Sat Jan 28 12:33:35.103167 2023] [mpm_winnt:notice] [pid 52:tid 368] AH00456: Apache Lounge VS16 Server built: Jun 22 2022 09:58:15
-[Sat Jan 28 12:33:35.103167 2023] [core:notice] [pid 52:tid 368] AH00094: Command line: 'f:\\uni\\iqra\\courses\\dbms lab\\new folder\\apache\\bin\\httpd.exe -d F:/uni/IQRA/courses/DBMS LAB/New Folder/apache'
-[Sat Jan 28 12:33:35.119169 2023] [mpm_winnt:notice] [pid 52:tid 368] AH00418: Parent: Created child process 2888
-[Sat Jan 28 12:33:35.871059 2023] [ssl:warn] [pid 2888:tid 352] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat Jan 28 12:33:35.954418 2023] [ssl:warn] [pid 2888:tid 352] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat Jan 28 12:33:36.010736 2023] [mpm_winnt:notice] [pid 2888:tid 352] AH00354: Child: Starting 150 worker threads.
