@@ -40,6 +40,39 @@ var essay = prompt("write essayunder 200 words");
 var essayMax = essay.slice(0, 200);
 alert(essayMax);
 
+//Upppercase and lowercase
+a = prompt("enter your name");
+
+capital = a.slice(0, 1);
+small = a.slice(1);
+capitalName = capital.toUpperCase();
+smallName = small.toLowerCase();
+var fullName = capitalName + smallName;
+
+alert(fullName);
+
+//Random number generator:it generates from 0 to 0.999999999999 so we can multiply it by any number and it will generate a random number in that range
+
+//problem:create a love calculator that will generate any random score to satisfy a user and modify the alert statement based on the lovescore
+var w = prompt("Enter your name");
+var h = prompt("enter your lover");
+
+chances = Math.floor(Math.random() * 101);
+
+if (chances > 70) {
+  alert("your lovescore is " + chances + "%, you are a perfect match");
+} else if (chances > 50 && chances < 71) {
+  alert("youur lovescore is " + chances + "% it may or may not work out");
+} else {
+  alert("your chances are " + chances + "% they are not the one for u");
+}
+
+
+
+
+
+
+
 //to print
 console.log("Hello_world");
 let name = "ali";
@@ -182,12 +215,47 @@ let result4 = var5 + var4;
 console.log(`The result of ${var4} and ${var5} is ${result4}`);
 
 //LOOPS
+//whileloop
 
+//problem: print fizz if divisible by 3 ,print  buzz if by 5 and fizzbuzz if by both (push value ibto array) 
+var output = [];
+var numbr = 1;
+
+function fizzbuzz() {
+  while (numbr < 30) {
+    numbr++;
+
+    if (numbr % 3 == 0) {
+      output.push("Fizz");
+    } else if (numbr % 5 == 0) {
+      output.push("Buzz");
+    } else if (numbr % 3 == 0 && numbr % 5 == 0) {
+      output.push("FizzBuzz");
+    } else {
+      output.push(numbr);
+    }
+  }
+  console.log(output);
+}
+
+fizzbuzz();
+
+
+//Forloop
 for (let i = 0; i < 5; i++) {
   console.log("HELLO WORLD for" + i + " number of loops");
 }
 
 let z = 3;
+
+//problem:write a song from 99 bottle to 0 
+var botle = 99;
+
+for (botle < 2; botle--; ) {
+  var remaining = botle - 1;
+
+  console.log(botle + " bottles of water take one down " + remaining + " left");
+}
 
 //OBJECTS IN JAVASCRIPT
 console.log("OBJECTS IN JAVASCRIPT");
@@ -254,6 +322,32 @@ empty_arr[1] = "Sohaib";
 empty_arr[3] = "Jamal";
 empty_arr.push("farhan");
 console.log(empty_arr);
+
+
+//problem:create a program that asks user to enter name to enter the party if their naeme is iin the guestlist welcone them else not .
+var guestList = [
+  "Ali",
+  "Umar",
+  "Anjam",
+  "Usman",
+  "Ahmad",
+  "Sajal",
+  "Saad",
+  "Amir",
+];
+
+var guestname = prompt("Enter your name");
+
+if (guestList.includes(guestname)) {
+  alert("welcome");
+} else {
+  alert("not welcome");
+}
+
+
+
+
+
 //push function can be used to print number in order from 0 to x in sequence
 //pop is used to delete numbers/variable from last to first (Stack)
 
@@ -356,6 +450,35 @@ function grade(marks) {
 grade(72);
 grade(88);
 grade(50);
+
+//PROBLEM:create a functon that takes budget as an input and treturns the amount of bottle su can buy if one bottle costs 1.5$
+var cost = 1.5;
+
+function buy(budget) {
+  var bottles = Math.trunc(budget / cost);
+  console.log("you have bought " + bottles + " bottles");
+}
+
+buy(15);
+
+//PROBLEM: create a BMI calculator
+//BMI calculator
+
+var w=prompt("Enter your weight")
+var h=prompt("enter your height")
+
+function BMI(w,h){
+
+var height=Math.pow(h,2)
+
+    var B=w/height
+    return B;
+    
+    
+}
+BMI(w,h)
+
+
 
 //Return
 function mul(fun1, fun2) {

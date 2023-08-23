@@ -1,0 +1,36 @@
+.n{
+display: inline;
+text-align: center;
+padding-inline: 20px;
+color:#59240c;
+
+}
+
+#nav{
+background-color: gainsboro;
+
+border: 20px solid gainsboro;
+text-align: center;
+}
+a{
+    color: #59240c;
+}
+#h,#a,#c{
+
+    padding: 10px;
+}
+
+
+.headings{
+    color: aliceblue;
+background-color: #19695b;
+border-bottom: 2px solid black;
+
+}
+
+#all{
+    font-family: 'IBM Plex Sans', sans-serif;
+  
+padding-left: 40px;
+padding-right: 40px;
+}
