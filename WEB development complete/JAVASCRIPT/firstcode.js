@@ -67,12 +67,6 @@ if (chances > 70) {
   alert("your chances are " + chances + "% they are not the one for u");
 }
 
-
-
-
-
-
-
 //to print
 console.log("Hello_world");
 let name = "ali";
@@ -217,7 +211,7 @@ console.log(`The result of ${var4} and ${var5} is ${result4}`);
 //LOOPS
 //whileloop
 
-//problem: print fizz if divisible by 3 ,print  buzz if by 5 and fizzbuzz if by both (push value ibto array) 
+//problem: print fizz if divisible by 3 ,print  buzz if by 5 and fizzbuzz if by both (push value ibto array)
 var output = [];
 var numbr = 1;
 
@@ -240,6 +234,30 @@ function fizzbuzz() {
 
 fizzbuzz();
 
+//hiigh order functions:those functions which can take other functions as asn input
+
+//problem: create a calculator which can add sub mul and devide
+function add(a, b) {
+  return a + b;
+}
+
+function sub(a, b) {
+  return a - b;
+}
+
+function mul(a, b) {
+  return a * b;
+}
+
+function devide(a, b) {
+  return a / b;
+}
+
+function calc(a, b, operator) {
+  return operator(a, b);
+}
+
+calc(7, 8, devide);
 
 //Forloop
 for (let i = 0; i < 5; i++) {
@@ -248,7 +266,7 @@ for (let i = 0; i < 5; i++) {
 
 let z = 3;
 
-//problem:write a song from 99 bottle to 0 
+//problem:write a song from 99 bottle to 0
 var botle = 99;
 
 for (botle < 2; botle--; ) {
@@ -258,6 +276,32 @@ for (botle < 2; botle--; ) {
 }
 
 //OBJECTS IN JAVASCRIPT
+//objects when a object has many properties u dont have to explicitely define it u can also create an object
+var houseKeeper = {
+  name: "lisa",
+  experience: "12years",
+  work: ["laundary", "cooking", "cleaning"],
+};
+console.log(houseKeeper);
+
+//now if I want to hire multiple housekeepers i dont wanna enter the deatail manually instead i create a constructor function which creates the objects for me I just need to input information
+//construcotr
+function ObjectGenerator(name, age, exp, work) {
+  this.name = name;
+  this.age = age;
+  this.exp = exp;
+  this.work = work;
+}
+
+//now generating housekeeper1 using the objectGenerator function above
+var houseKeeper1 = new ObjectGenerator("Arya", 19, "2years", [
+  "laundary",
+  "cooking",
+  "cleaning",
+]);
+
+console.log(houseKeeper1);
+
 console.log("OBJECTS IN JAVASCRIPT");
 let student = {
   name: "Adnan",
@@ -323,7 +367,6 @@ empty_arr[3] = "Jamal";
 empty_arr.push("farhan");
 console.log(empty_arr);
 
-
 //problem:create a program that asks user to enter name to enter the party if their naeme is iin the guestlist welcone them else not .
 var guestList = [
   "Ali",
@@ -343,10 +386,6 @@ if (guestList.includes(guestname)) {
 } else {
   alert("not welcome");
 }
-
-
-
-
 
 //push function can be used to print number in order from 0 to x in sequence
 //pop is used to delete numbers/variable from last to first (Stack)
@@ -464,21 +503,16 @@ buy(15);
 //PROBLEM: create a BMI calculator
 //BMI calculator
 
-var w=prompt("Enter your weight")
-var h=prompt("enter your height")
+var w = prompt("Enter your weight");
+var h = prompt("enter your height");
 
-function BMI(w,h){
+function BMI(w, h) {
+  var height = Math.pow(h, 2);
 
-var height=Math.pow(h,2)
-
-    var B=w/height
-    return B;
-    
-    
+  var B = w / height;
+  return B;
 }
-BMI(w,h)
-
-
+BMI(w, h);
 
 //Return
 function mul(fun1, fun2) {
