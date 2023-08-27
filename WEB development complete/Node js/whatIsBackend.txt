@@ -1,0 +1,6 @@
+Frontend is the part where we deal with a designing of our website with tecnologies like html Css and JS 
+
+Backend: it is a part which deal with the bussiniss logic and how the website works it has 3 main componrets 
+1)server:where all your code and files are saved (html,css,js and sources files)
+2)database:database stores the user data such as their details(name,age etc),login passwords etc like they are stored in excel sheets)    
+3)application:where u write how your applicaion works(like payment and registration proccess)
