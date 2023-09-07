@@ -1,0 +1,14 @@
+{
+  "name": "createpacakge",
+  "version": "1.0.0",
+  "description": "creating first \u001b[B\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dmy first npm pacakge\u001b[D\u001b\u001b[C\u001b[C\u001b[kage",
+  "main": "useOfNPM.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adnan",
+  "license": "ISC",
+  "dependencies": {
+    "supervillains": "^3.1.0"
+  }
+}
