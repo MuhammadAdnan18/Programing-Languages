@@ -1,0 +1,5 @@
+An API(Aplication program interface) is aset pf comandst,functions or protocols that porgrammers can use to create softwares or interact with external systems. so that we dont have to write code from scrath
+Exp:with the help of API u can use data from external servers and iteract from it(eg a tinder profile can be integrated with facebook id by using API this gives tinder all your facebook detai;ls ie friends,login  details)but u cant just go to any server and fetch out info from it you have to make  request through API
+curl:client url(used to run urls on command line)
+unix timestamp:1632098178(2021)
+curl -H "X-Testing: testing" https://apiv2.bitcoinaverage.com/indices/global/history/BTCUSD?at=1632098178&resolution=day
