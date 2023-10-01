@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO-List</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <!--basically we need to create a logic so it can tell which day is today by changing one word from sentence i.e(it's a today=monday,tuesday,sunday etc)-->
+    <!--The word which we use to replace will be written inside <%=  %> here (day)-->
+    <!--eg: <h3>it's a <%=day%> !</h3> -->
+    <!--
+
+    -------HOW TO USE JAVA SCRIPT in EJS templete-----------
+  <% if(day==="Saturday" || day==="Sunday"){ %>
+    <h3 style="color: brown"><%=day%>'s TODO lis !</h3>
+    <% } else{ %>
+    <h3 style="color: blue"><%=day%>'s TODO list !</h3>
+    <%} %>
+   -->
+
+    <div class="box" id="heading"><h1><%= day %></h1></div>
+    <!--now create a list for todo list-->
+    <ul>
+      <!--a loop will be used to create a seperate entry for each item in todo list-->
+      <div  class="box">
+ <% for( var i=0;i < newListItems.length ; i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%= newListItems[i] %></p></div>
+      <% } %>
+    </ul>
+ <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="new item"/>
+      <button type="submit" name="button">+</button>
+    </form>
+      </div>
+     
+   
+  </body>
+</html>
