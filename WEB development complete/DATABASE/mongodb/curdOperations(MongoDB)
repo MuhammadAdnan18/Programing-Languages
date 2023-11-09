@@ -1,0 +1,276 @@
+//------------------------------CREATE--------------------
+//to start mongo db on server:
+$ mongosh
+//TP CREATE A DATABASE(shopDB)
+test> use shopDB
+
+
+//------------------------------INSERT--------------------
+
+//TO INSEERT IN DATABASE
+
+shopDB> db.products.insertOne({id:1, name:"pen",price:1})
+{
+  acknowledged: true,
+  insertedId: ObjectId("651fee288c79873a4ac189ad")
+}
+
+//TO SHOW ALL DATABASES
+shopDB> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   72.00 KiB
+shopDB  40.00 KiB
+shopDB> show collections
+products
+
+//INSERT WITH CONDITION
+
+shopDB> db.products.insertOne({id:2,name:"Pencil",price:1 })
+{
+  acknowledged: true,
+  insertedId: ObjectId("651feea58c79873a4ac189ae")
+}
+//------------------------------UPDATE--------------------
+
+
+
+shopDB> db.products.updateMany({},{$inc:{stock:22}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+shopDB> show collections
+products
+
+//------------------------------READ--------------------
+
+shopDB> db.products.findOne()
+{
+  _id: ObjectId("651fee288c79873a4ac189ad"),
+  id: 1,
+  name: 'pen',
+  price: 1,
+  stock: 22
+}
+shopDB> db.products.findMany()
+TypeError: db.products.findMany is not a function
+shopDB> db.products.findAll()
+TypeError: db.products.findAll is not a function
+shopDB> db.products.find({})
+[  
+  {
+    _id: ObjectId("651fee288c79873a4ac189ad"),
+    id: 1,
+    name: 'pen',
+    price: 1,
+    stock: 22
+  },
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    id: 2,
+    name: 'Pencil',
+    price: 1,
+    stock: 22
+  }
+]
+shopDB> show dbs
+admin   40.00 KiB
+config  96.00 KiB
+local   72.00 KiB
+shopDB  72.00 KiB
+shopDB> db.products.find({},{id:1})
+[
+  { _id: ObjectId("651fee288c79873a4ac189ad"), id: 1 },
+  { _id: ObjectId("651feea58c79873a4ac189ae"), id: 2 }
+]
+shopDB> db.products.find({},{id:0})
+[
+  {
+    _id: ObjectId("651fee288c79873a4ac189ad"),
+    name: 'pen',
+    price: 1,
+    stock: 22
+  },
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    name: 'Pencil',
+    price: 1,
+    stock: 22
+  }
+]
+shopDB> db.products.find({id:{$gt:1}},{id:0})
+[  
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    name: 'Pencil',
+    price: 1,
+    stock: 22
+  }
+]
+shopDB> db.products.find({id:{$gt:1}},{id:1})
+[ { _id: ObjectId("651feea58c79873a4ac189ae"), id: 2 } ]
+shopDB> db.products.find()
+[  
+  {
+    _id: ObjectId("651fee288c79873a4ac189ad"),
+    id: 1,
+    name: 'pen',
+    price: 1,
+    stock: 22
+  },
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    id: 2,
+    name: 'Pencil',
+    price: 1,
+    stock: 22
+  }
+]
+shopDB> db.products.find({id:{$eq:1}},{id:1})
+[ { _id: ObjectId("651fee288c79873a4ac189ad"), id: 1 } ]
+shopDB> db.products.find(name:"pen")
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:21)
+
+> 1 | db.products.find(name:"pen")
+    |                      ^
+  2 |
+
+shopDB> db.products.find({name:"pen"})
+[  
+  {
+    _id: ObjectId("651fee288c79873a4ac189ad"),
+    id: 1,
+    name: 'pen',
+    price: 1,
+    stock: 22
+  }
+]
+shopDB> db.products.updateOne({},{$set:{stock:12}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+shopDB> db.find()
+TypeError: db.find is not a function
+shopDB> db.products.find()
+[  
+  {
+    _id: ObjectId("651fee288c79873a4ac189ad"),
+    id: 1,
+    name: 'pen',
+    price: 1,
+    stock: 12
+  },
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    id: 2,
+    name: 'Pencil',
+    price: 1,
+    stock: 22
+  }
+]
+shopDB> db.products.updateOne({id:1},{$set:{stock:12}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+shopDB> db.products.find()
+[  
+  {
+    _id: ObjectId("651fee288c79873a4ac189ad"),
+    id: 1,
+    name: 'pen',
+    price: 1,
+    stock: 12
+  },
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    id: 2,
+    name: 'Pencil',
+    price: 1,
+    stock: 22
+  }
+]
+shopDB> db.products.updateOne({id:2},{$set:{stock:12}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+shopDB> db.products.find()
+[  
+  {
+    _id: ObjectId("651fee288c79873a4ac189ad"),
+    id: 1,
+    name: 'pen',
+    price: 1,
+    stock: 12
+  },
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    id: 2,
+    name: 'Pencil',
+    price: 1,
+    stock: 12
+  }
+
+  //------------------------------DELETE--------------------
+
+]
+shopDB> db.products.deleteOne({id:1})
+{ acknowledged: true, deletedCount: 1 }
+shopDB> db.products.find()
+[  
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    id: 2,
+    name: 'Pencil',
+    price: 1,
+    stock: 12
+  }
+]
+shopDB> db.products.deleteOne({id:1},{price})
+ReferenceError: price is not defined
+shopDB> db.products.deleteOne({id:2},{price})
+ReferenceError: price is not defined
+
+//-----------------------------RELATIONS-------------------------------
+//HERE revies have one to many relations with product 
+shopDB> db.products.insertOne({id:3,name:"rubber",price:2,Reviews:[{author:"John",rate:5,comments:"beautiful"},{author:"Ahmad",rate:4,comments:"best"}]})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6520023d8c79873a4ac189af")
+}
+shopDB> db.products.find()
+[  
+  {
+    _id: ObjectId("651feea58c79873a4ac189ae"),
+    id: 2,
+    name: 'Pencil',
+    price: 1,
+    stock: 12
+  },
+  {
+    _id: ObjectId("6520023d8c79873a4ac189af"),
+    id: 3,
+    name: 'rubber',
+    price: 2,
+    Reviews: [
+      { author: 'John', rate: 5, comments: 'beautiful' },
+      { author: 'Ahmad', rate: 4, comments: 'best' }
+    ]
+  }
+]

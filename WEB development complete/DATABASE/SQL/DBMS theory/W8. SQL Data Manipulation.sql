@@ -1,0 +1,10 @@
+#CREATING A TABLE
+
+CREATE TABLE staff(
+staff_name VARCHAR(40),
+staff_no INT PRIMARY KEY,
+salary INT
+)
+
+INSERT INTO staff
+VALUES('ali',12,2500)
