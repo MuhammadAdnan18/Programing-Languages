@@ -1,0 +1,33 @@
+/\*
+//
+
+> react is a library not framework it is confused as framework ecause it gives competetions to frame workds like angular and vue
+> state:it indicates the details inside of component
+> props:it is to change details of a component
+> JSX:in jsx we use all the same keywords as in html with the exception of few(class=>className , for=>htmlFor) but important thing is u can also use javascript variables in it
+> single page: in single page user request server and gets html,css and js all in bundle and js takes over and controlss the whole page so wesite dont have to reload again and again
+> multipage:but in multuiple pags when user request for website only html,css and js for first page will be served to user so when user wants to go to other site(ie:/about) the website will reload again
+
+//
+
+(PASTE BOTH OF THESE BOOTSTRAP CSS LINK:
+
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />)
+
+1)to create react app: npx create-react-app appname
+2)we will do most of work in src abd public folder, components and props are stored in src foldeer
+3)index.js is usually the entry pointin reacy app with renders the app.js and any other component
+4)TO START react app:npm start
+
+\*/

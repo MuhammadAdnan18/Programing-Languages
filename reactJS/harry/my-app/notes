@@ -1,0 +1,20 @@
+/*
+//
+>react is a library not framework it is confused as framework ecause it gives competetions to frame workds like angular and vue
+>state:it indicates the details inside of component
+>props:it is to change details of a component
+
+
+
+//
+
+1)to create react app: npx create-react-app appname
+2)we will do most of work in src abd public folder, components and props are stored in src foldeer 
+3)index.js is usually the entry pointin reacy app with renders the app.js and any other component 
+4)TO START react app:npm start
+5)componnets are either:a)function based ,b)class based
+
+
+
+
+*/

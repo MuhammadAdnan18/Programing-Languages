@@ -1,0 +1,19 @@
+//we will create a textutills app which can tell how many number of words and if you want to remove any extra spaces and can capitalized or lowercase any text pasted inside that box
+we create it with the help of nbootstrap
+
+//we will use props which are used to modify the content of our pages and hence we can use that page in any other scenario without recreating from scratch i.e(page created for intorduction can be modified and used for contact somewhre else) you can send strings ,objects or even pages links in props and later modify it.
+
+//state:the state of component constantly changes,as we modify it or provide certsin input similarly u can use state to track changes in ur textarea as the text entered in text area, for this u will use a hook which comes with 2 variables 2 variable stores the state before any changes were made and other stores the state after making changes(input)
+EG:const {count,setcount}=useState(0);
+to pass text written in gtext area into text states pass text in value of textarea.
+---
+
+1)setup bootstrap in index.html
+2)copy paste navbar from bootstrap and change it to match jsx(class=>className etc)
+3)change app name and othe pages name
+4)create components folder (always name components with capital letter i.e Navbar not navbar)
+5)to use props u first have to give props property to that html element and write it in brackets since it is javascript. eg(title => {props.title})
+6)and than modify that prop in ap.js where u render that page
+7)to make sure there are no errors later on we can define data types for these props i;e
+=>import proptypes than Navbar.proptypes={ about: PropTypes.string
+}
