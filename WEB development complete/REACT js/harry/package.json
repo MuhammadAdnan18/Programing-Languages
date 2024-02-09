@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-router": "^6.21.3",
+    "react-top-loading-bar": "^2.3.1"
+  }
+}
