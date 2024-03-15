@@ -3,7 +3,6 @@ import "./App.css";
 import React, { Component } from "react";
 import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoadingBar from "react-top-loading-bar";
 
 //instead of built in function based component we create a classs based component
 //in class we can create multiple functions and use all features of oop and classes like constructor(this.name), inheritence and call functions
@@ -20,11 +19,7 @@ export default class App extends Component {
       <div>
         <Router>
           <Navbar />
-          <LoadingBar
-            color="#A7BDC8"
-            progress={this.state.progress}
-            height={3}
-          />
+
           <Routes>
             <Route
               exact
