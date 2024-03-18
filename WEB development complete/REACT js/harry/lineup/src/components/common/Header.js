@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({ toggleSidebar }) => {
+const Header = ({ toggleSidebar, title }) => {
   return (
     <header className="header navbar navbar-dark bg-dark">
       <div className="container">
@@ -15,7 +15,7 @@ const Header = ({ toggleSidebar }) => {
           </button>
         </div>
         <Link className="navbar-brand mx-auto" to="/admin/dashboard">
-          Admin Panel
+          {title}
         </Link>
       </div>
     </header>

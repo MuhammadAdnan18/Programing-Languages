@@ -15,13 +15,18 @@ function App() {
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
+  const [currentPage, setCurrentPage] = useState("Admin Panel");
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
     <Router>
       <div className="app">
-        <Header toggleSidebar={toggleSidebar} />
+        <Header toggleSidebar={toggleSidebar} title={currentPage} />
         <div className="main-content">
-          <Sidebar show={showSidebar} />
+          <Sidebar show={showSidebar} onPageChange={handlePageChange} />
           <Routes>
             <Route
               exact
