@@ -25,7 +25,6 @@ function App() {
   };
 
   return (
-<<<<<<< HEAD
     <AuthContextProvider>
       {" "}
       {/* Wrap your app with AuthContextProvider */}
@@ -53,31 +52,6 @@ function App() {
               />
             </Routes>
           </div>
-=======
-    <Router>
-      <div className="app">
-        <Header toggleSidebar={toggleSidebar} title={currentPage} />
-        <div className="main-content">
-          <Sidebar show={showSidebar} onPageChange={handlePageChange} />
-          <Routes>
-            <Route
-              exact
-              path="/admin/dashboard"
-              element={<AdminDashboard />}
-            ></Route>
-            <Route
-              exact
-              path="/admin/students"
-              element={<StudentManagement />}
-            />
-            <Route exact path="/admin/buses" element={<BusManagement />} />
-            <Route
-              exact
-              path="/admin/arrivals"
-              element={<ArrivalManagement />}
-            />
-          </Routes>
->>>>>>> 33c034174ddbe9df150ed2cc457b725326acb010
         </div>
       </Router>
     </AuthContextProvider>

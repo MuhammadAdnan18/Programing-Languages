@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import React, { useState } from "react";
 
 function BusManagement() {
   const [selectedBus, setSelectedBus] = useState(null);
@@ -88,13 +87,6 @@ function BusManagement() {
 
   // Function to handle deleting a bus
   const handleDeleteBus = (id) => {
-    // Check user role before allowing deletion
-    const isAdmin = true; // Set to true if the user is an admin
-    if (!isAdmin) {
-      alert("You do not have permission to delete buses.");
-      return;
-    }
-
     const updatedBuses = buses.filter((bus) => bus.id !== id);
     setBuses(updatedBuses);
     // Reset selectedBus state if the deleted bus was selected
@@ -109,13 +101,6 @@ function BusManagement() {
 
   // Function to add a new bus
   const handleAddBus = () => {
-    // Check user role before allowing addition
-    const isAdmin = true; // Set to true if the user is an admin
-    if (!isAdmin) {
-      alert("You do not have permission to add buses.");
-      return;
-    }
-
     const newBus = {
       id: buses.length + 1,
       vanNo: vanNo,
@@ -213,90 +198,8 @@ function BusManagement() {
           </tbody>
         </table>
       </div>
-    <div className="vh-100">
-      <div className="h-auto d-inline-block w-100 text-center">
-        <h1>VAN Details</h1>
-      </div>
-      <div className="h-auto d-inline-block w-100 d-flex align-items-center justify-content-center">
-        {/* Inputs for editing bus information */}
-        <div className="input-group mb-3">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Van No"
-            name="vanNo"
-            value={vanNo}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Van Reg"
-            name="vanReg"
-            value={vanReg}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Driver Name"
-            name="driverName"
-            value={driverName}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Departure Time"
-            name="departureTime"
-            value={departureTime}
-            onChange={handleInputChange}
-          />
-          <button className="btn btn-primary mr-2" onClick={handleUpdateBus}>
-            Update
-          </button>
-          {selectedBus && (
-            <button
-              className="btn btn-danger mr-2"
-              onClick={() => handleDeleteBus(selectedBus.id)}
-            >
-              Delete
-            </button>
-          )}
-          <button className="btn btn-success" onClick={handleAddBus}>
-            Add
-          </button>
-        </div>
-      </div>
-      <div className="h-50 overflow-y-scroll">
-        <table className="table table-light table-striped-columns ">
-          <thead>
-            <tr>
-              <th>VAN NO</th>
-              <th>VAN REG</th>
-              <th>DRIVER NAME</th>
-              <th>DEPARTURE TIME</th>
-            </tr>
-          </thead>
-          <tbody>
-            {buses.map((bus) => (
-              <tr
-                key={bus.id}
-                onClick={() => handleBusSelect(bus)}
-                style={{ cursor: "pointer" }}
-              >
-                <td>{bus.vanNo}</td>
-                <td>{bus.vanReg}</td>
-                <td>{bus.driverName}</td>
-                <td>{bus.departureTime}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
     </div>
   );
-}
 }
 
 export default BusManagement;
