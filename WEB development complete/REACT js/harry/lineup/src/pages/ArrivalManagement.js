@@ -22,13 +22,30 @@ const mystyle = {
     width: "100%",
     fontSize: "16px",
   },
+  select: {
+    padding: "12px",
+    margin: "8px 0",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    width: "100%",
+    boxSizing: "border-box",
+    appearance: "none",
+    fontSize: "16px",
+    backgroundColor: "#f8f8f8",
+  },
+  column: {
+    width: "50%",
+    float: "left",
+  },
 };
 
 const ArrivalManagement = () => {
   // State variables for form inputs
+  const [option, setOption] = useState("bus");
   const [busId, setBusId] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
   const [departureTime, setDepartureTime] = useState("");
+  const [parentName, setParentName] = useState("");
 
   // State variable for list of arrivals/departures
   const [arrivalList, setArrivalList] = useState([]);
@@ -39,13 +56,22 @@ const ArrivalManagement = () => {
     if (name === "busId") setBusId(value);
     else if (name === "arrivalTime") setArrivalTime(value);
     else if (name === "departureTime") setDepartureTime(value);
+    else if (name === "parentName") setParentName(value);
+  };
+
+  // Function to handle option change
+  const handleOptionChange = (e) => {
+    setOption(e.target.value);
   };
 
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     // Validate input fields
-    if (!busId || !arrivalTime || !departureTime) {
+    if (
+      (option === "bus" && (!busId || !arrivalTime || !departureTime)) ||
+      (option === "parent" && (!parentName || !arrivalTime || !departureTime))
+    ) {
       // Handle validation error
       return;
     }
@@ -54,27 +80,46 @@ const ArrivalManagement = () => {
       ...arrivalList,
       {
         id: arrivalList.length + 1,
+        type: option,
         busId,
         arrivalTime,
         departureTime,
+        parentName,
       },
     ]);
     // Clear input fields after submission
     setBusId("");
     setArrivalTime("");
     setDepartureTime("");
+    setParentName("");
   };
+
+  // Filter bus arrivals
+  const busArrivals = arrivalList.filter((arrival) => arrival.type === "bus");
+  // Filter parent arrivals
+  const parentArrivals = arrivalList.filter(
+    (arrival) => arrival.type === "parent"
+  );
 
   return (
     <div>
-      <h2>Arrival Management</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Bus ID:</label>
+          <select
+            style={mystyle.select}
+            value={option}
+            onChange={handleOptionChange}
+          >
+            <option value="bus">Bus</option>
+            <option value="parent">Parent</option>
+          </select>
+        </div>
+        <div>
+          <label>{option === "bus" ? "Bus ID:" : "Parent Name:"}</label>
           <input
             type="text"
-            name="busId"
-            value={busId}
+            name={option === "bus" ? "busId" : "parentName"}
+            value={option === "bus" ? busId : parentName}
             onChange={handleInputChange}
             style={mystyle.input}
           />
@@ -105,13 +150,24 @@ const ArrivalManagement = () => {
       </form>
 
       {/* Display existing arrival/departure time entries */}
-      <div>
-        <h3>Existing Arrival/Departure Times</h3>
+      <div style={mystyle.column}>
+        <h3>Bus Arrivals</h3>
         <ul>
-          {arrivalList.map((arrival) => (
+          {busArrivals.map((arrival) => (
             <li key={arrival.id}>
-              Bus ID: {arrival.busId}, Arrival Time: {arrival.arrivalTime},{" "}
+              Bus ID: {arrival.busId}, Arrival Time: {arrival.arrivalTime},
               Departure Time: {arrival.departureTime}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div style={mystyle.column}>
+        <h3>Parent Arrivals</h3>
+        <ul>
+          {parentArrivals.map((arrival) => (
+            <li key={arrival.id}>
+              Parent Name: {arrival.parentName}, Arrival Time:{" "}
+              {arrival.arrivalTime}, Departure Time: {arrival.departureTime}
             </li>
           ))}
         </ul>

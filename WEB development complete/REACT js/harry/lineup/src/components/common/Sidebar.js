@@ -60,7 +60,7 @@ const Sidebar = ({ show, onPageChange }) => {
 
 const mystyle = {
   color: "white",
-  backgroundColor: "#1B1E25",
+  backgroundColor: "#212529",
   fontFamily: "Arial",
   border: "0.5px solid gray",
 };

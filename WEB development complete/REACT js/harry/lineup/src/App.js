@@ -9,6 +9,7 @@ import StudentManagement from "./pages/StudentManagement";
 import BusManagement from "./pages/BusManagement";
 import ArrivalManagement from "./pages/ArrivalManagement";
 import AuthContextProvider from "./contexts/AuthContext"; // Import AuthContextProvider
+
 import { useState } from "react";
 import "./App.css";
 
@@ -26,8 +27,6 @@ function App() {
 
   return (
     <AuthContextProvider>
-      {" "}
-      {/* Wrap your app with AuthContextProvider */}
       <Router>
         <div className="app">
           <Header toggleSidebar={toggleSidebar} title={currentPage} />
